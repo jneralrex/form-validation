@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <nav>
+      <p class="companyName">N-REACH GLOBAL</p>
+      <ul class="nav-ul">
+        <li>About us</li>
+        <li>|</li>
+        <li>Contact us</li>
+        <li>|</li>
+        <li>Login</li>
+        <li>|</li>
+        <li>Sign up</li>
+        <li>|</li>
+        <li>FAQs</li>
+      </ul>
+    </nav>
+
+    <div class="main">
+      <div class="sideNote">
+        <p class="p1">The Best Counseling Place For You.</p>
+      </div>
+      
+      <form id="scheduleingForm" class="scheduleing-form" autocomplete="off">
+        <div class="details-left">
+          <div class="firstNameField">
+            <label for="firstNameInput"
+              ><p class="input-title-name">First Name</p>
+              <br />
+              <input type="text" name="" id="userFirstName"  placeholder="First Name" />
+              <br>
+              <span id="userFirstNameError" class="error"> </span>
+            </label>
+          </div>
+          <br /><br /><br />
+           <div class="telPhoneField">
+            <label for="telPhoneInput"
+              ><p class="input-title-name">Tele Phone</p>
+              <br />
+              <input type="tel" name="" id="userTelephone" placeholder="Telephone Number" /> <br>
+              <span id="userTelPhoneError" class="error"> </span>
+            </label>
+          </div>
+          <br /><br /><br />
+          <div class="addressField">
+            <label for="addressInput"
+              ><p class="input-title-name">Address</p>
+              <br />
+              <input type="text" name="" id="userAddress" placeholder="Address"/> <br>
+              <span id="userAddressError" class="error"> </span>
+            </label>
+          </div>
+          <br /><br /><br />
+          <div class="consultationField">
+            <label for="consultationInput">
+              <p class="input-title-name">Select Field of Consultation</p>
+              <br />
+              <select name="" id="consultationPurpose"  onchange="counsellorsByPurpose()">
+                <option value=""></option>
+                <option value="career">Career</option>
+                <option value="growth">Growth</option>
+                <option value="changeOfProffession">
+                  Change of Profession
+                </option>
+                <option value="others"></option>
+              </select> <br>
+              <span id="consultationError" class="error"> </span>
+            </label>
+          </div>
+        </div>
+
+        <div class="details-right">
+
+          <div class="lastNameField">
+            <label for="lastNameInput"
+              ><p class="input-title-name">Last Name</p>
+              <br />
+              <input type="text" name="" id="userLastName" placeholder="Last Name"/><br>
+              <span id="userLastNameError" class="error"> </span>
+            </label>
+          </div>
+          <br /><br /><br />
+          <div class="emailField">
+            <label for="emailInput"
+              ><p class="input-title-name">Email</p>
+              <br />
+              <input type="email" name="" id="userEmail" placeholder="Email"/> <br>
+              <span id="userEmailError" class="error"> </span> <br>
+            </label>
+          </div>
+          <br /><br />
+          <div class="dateandTimeField">
+            <label for="dateandTime">
+              <p class="input-title-name">Preferred and Time</p>
+              <br />
+              <input
+                type="datetime-local"
+                name=""
+                id="userPreferredDateAndTime"
+              /> <br>
+              <span id="datetimeLocalError" class="error"> </span>
+            </label>
+          </div>
+          <br /><br /><br />
+          <div class="consultantsField">
+            <label for="consultants"
+              ><p class="input-title-name">Select Consultant</p>
+              <br />
+              <select name="" id="careerConsultantsList" class="careerConsultantsList">
+                <option value=""></option>
+                <option value="Charity">Counselor Charity</option>
+                <option value="Jane">Counselor Jane</option>
+                <option value="Samad">Counselor Samad</option>
+                <option value="Kingsley">Counselor Kingsley</option>
+              </select>
+              <br>
+               <span id="careerConsultantsListError" class="error"> </span>
+              <br>
+              <select name="" id="growthConsultantsList" class="growthConsultantsList">
+                <option value=""></option>
+                <option value="Charity">Counselor Augustine</option>
+                <option value="Jane">Counselor Taiwo</option>
+                <option value="Samad">Counselor Jeffery</option>
+                <option value="Kingsley">Counselor Chinedu</option>
+              </select>
+              <br>
+               <span id="growthConsultantsListError" class="error"> </span>
+              <br>
+                <select name="" id="changeOfProfessionConsultantsList" class="changeOfProfessionConsultantsList">
+                <option value=""></option>
+                <option value="Charity">Counselor Sandara</option>
+                <option value="Jane">Counselor Musa</option>
+                <option value="Samad">Counselor Anthonia</option>
+                <option value="Kingsley">Counselor Raymond</option>
+              </select>
+              <br>
+              <span id="changeOfProfessionConsultantsListError" class="error"> </span>
+            </label>
+          </div>
+        </div>
+
+        <label for="moreDetails"
+          ><p class="input-title-name p10">More Details</p>
+          <br />
+          <textarea
+            name=""
+            id="moreDetails"
+            cols="45"
+            rows="15"
+            class="moreDetails"
+          ></textarea>
+          <span id="moreDetailsError" class="error"> </span>
+        </label>
+        
+      </form>
+      <div id="summaryOfSchedule">
+  
+      </div>
+    </div>
+    <input type="submit" class="button" onclick="processScheduling()"/>
+    <script src="index.js"></script>
+  </body>
+</html>
